@@ -1,17 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* -------------------------------------------
-       Header Scroll Effect
+       Header Scroll Effect (Sticky & Shrink)
+       EDIT: よりスムーズな判定ロジックに変更
     ------------------------------------------- */
     const header = document.getElementById('header');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        // 50px以上スクロールしたらクラス付与
+        if (window.scrollY > 20) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
+
+    /* -------------------------------------------
+       Intersection Observer for Fade-in Animation
+       EDIT: セクションが見えたらふわっと表示する処理を追加
+    ------------------------------------------- */
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // 15%見えたら発火
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // 一度発火したら監視解除（再アニメーションしない）
+            }
+        });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.fade-in-section');
+    fadeElements.forEach(el => observer.observe(el));
 
     /* -------------------------------------------
        Mobile Menu Toggle
@@ -20,11 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('nav');
     const navLinks = document.querySelectorAll('.nav__link');
 
-    // Toggle menu open/close
     menuBtn.addEventListener('click', () => {
         nav.classList.toggle('active');
-        
-        // Toggle hamburger animation
+        toggleMenuIcon();
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            toggleMenuIcon();
+        });
+    });
+
+    function toggleMenuIcon() {
         const bars = menuBtn.querySelectorAll('.bar');
         if (nav.classList.contains('active')) {
             bars[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
@@ -35,23 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
             bars[1].style.opacity = '1';
             bars[2].style.transform = 'none';
         }
-    });
-
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            // Reset hamburger animation
-            const bars = menuBtn.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
-        });
-    });
+    }
 
     /* -------------------------------------------
-       Smooth Scroll (Native CSS scroll-behavior 
-       covers most, but JS fallback for offsets)
+       Smooth Scroll (Native API)
+       EDIT: ヘッダーの高さを考慮したスムーススクロール
     ------------------------------------------- */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -62,9 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const headerHeight = header.offsetHeight;
+                // スクロール後のヘッダー高さを考慮
+                const headerOffset = 70; 
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
