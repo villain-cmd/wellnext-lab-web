@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT: ディスクリプションをよりユーザー視点に修正 -->
     <meta name="description" content="支える人が、支え続けられるために。WellNext Labは看護職のバーンアウト予防とセルフマネジメント教育を提供するウェルネスラボです。">
     <title>WellNext Lab | 看護職のための予防・教育ウェルネスラボ</title>
+    
     <!-- Google Fonts: Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +20,13 @@
         <div class="header__container">
             <h1 class="logo"><a href="#">WellNext Lab</a></h1>
             <nav class="nav" id="nav">
+                <!-- EDIT: ナビゲーションラベルを少し短くし、視認性を向上 -->
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="#nurses" class="nav__link">For Nurses</a></li>
-                    <li class="nav__item"><a href="#organizations" class="nav__link">For Schools & Hospitals</a></li>
+                    <li class="nav__item"><a href="#organizations" class="nav__link">For Organizations</a></li>
                     <li class="nav__item"><a href="#program" class="nav__link">Program</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#articles" class="nav__link">Articles</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
                 </ul>
             </nav>
@@ -38,7 +40,8 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero">
+        <!-- EDIT: fade-in-section クラスを追加（JSでアニメーション制御） -->
+        <section id="home" class="hero fade-in-section">
             <div class="hero__content">
                 <p class="hero__tagline">支える人が、支え続けられるために。</p>
                 <h2 class="hero__title">WellNext Lab</h2>
@@ -48,22 +51,22 @@
                 </p>
                 <div class="hero__actions">
                     <a href="#nurses" class="btn btn--primary">看護師・看護学生の方へ</a>
-                    <a href="#organizations" class="btn btn--secondary">教育機関・医療機関の方へ</a>
+                    <a href="#organizations" class="btn btn--secondary">医療・教育機関の方へ</a>
                 </div>
             </div>
         </section>
 
         <!-- Problem Section -->
-        <section class="section problem">
+        <section class="section problem fade-in-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">The Challenge</h2>
-                    <p class="section-subtitle">看護職のバーンアウトと離職は、<br class="sp-only">組織にとって致命的なコストです。</p>
+                    <p class="section-subtitle">看護職の燃え尽きと離職は、<br class="sp-only">防ぐことのできる課題です。</p>
                 </div>
                 <div class="problem__grid">
                     <div class="problem__text">
-                        <p>日本の医療現場において、看護師の離職率は依然として高い水準にあります。その背景にあるのは、個人の「弱さ」ではなく、感情労働という職業特性と、それを支える構造的な教育の欠如です。</p>
-                        <p>バーンアウト（燃え尽き症候群）による離職は、現場の疲弊を招くだけでなく、採用・育成コストの増大として病院経営を圧迫しています。</p>
+                        <p>日本の医療現場において、看護師の離職率は依然として高い水準にあります。その背景にあるのは、個人の「弱さ」ではなく、感情労働という職業特性と、それを支える構造的な教育の不足です。</p>
+                        <p>バーンアウト（燃え尽き症候群）による離職は、現場の疲弊を招くだけでなく、採用・育成コストの増大として病院経営にも大きな影響を与えています。</p>
                     </div>
                     <div class="problem__stats">
                         <div class="stat-card">
@@ -82,7 +85,7 @@
         </section>
 
         <!-- Solution Section -->
-        <section class="section solution">
+        <section class="section solution fade-in-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Our Solution</h2>
@@ -106,12 +109,14 @@
             </div>
         </section>
 
-        <!-- For Nurses Section -->
-        <section id="nurses" class="section bg-beige">
+        <!-- For Nurses Section (Personal) -->
+        <!-- EDIT: BtoC表記を削除し、自然な日本語へ -->
+        <section id="nurses" class="section bg-beige fade-in-section">
             <div class="container">
                 <div class="split-layout">
                     <div class="split-content">
-                        <span class="badge">BtoC Program</span>
+                        <!-- EDIT: ラベル変更 -->
+                        <span class="badge">個人向けプログラム</span>
                         <h2 class="section-title text-left">看護師・看護学生の方へ</h2>
                         <h3 class="sub-heading">感情労働・人間関係・生活不安に向き合うための<br>セルフマネジメント教育</h3>
                         <p>「自分さえ我慢すれば」と思っていませんか？<br>WellNext Labでは、長く健やかに働き続けるための「心の基礎体力」をつけるプログラムを提供しています。</p>
@@ -124,19 +129,20 @@
                         <a href="https://example.com/apply" class="btn btn--primary mt-4">プログラムに申し込む</a>
                     </div>
                     <div class="split-image nurse-img">
-                        <!-- CSSで抽象的なイメージを描画 -->
                         <div class="abstract-circle"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- For Schools & Hospitals Section -->
-        <section id="organizations" class="section">
+        <!-- For Organizations Section (Business) -->
+        <!-- EDIT: BtoB / For Business 表記を削除 -->
+        <section id="organizations" class="section fade-in-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge badge--dark">For Business</span>
-                    <h2 class="section-title">看護学校・医療機関のご担当者さまへ</h2>
+                    <!-- EDIT: ラベル変更 -->
+                    <span class="badge badge--dark">法人・教育機関向け</span>
+                    <h2 class="section-title">医療機関・教育機関のご担当者さまへ</h2>
                     <p class="section-subtitle">「人材定着」こそが、最強の経営戦略です。</p>
                 </div>
                 
@@ -151,7 +157,7 @@
                     </div>
 
                     <div class="roi-box">
-                        <h3 class="roi-title">Cost of Turnover / ROIの考え方</h3>
+                        <h3 class="roi-title">Cost of Turnover / 離職コストの考え方</h3>
                         <p class="roi-desc">看護師1名の離職にかかるコストは、採用費・教育費・生産性低下を含めると甚大です。</p>
                         <div class="roi-metrics">
                             <div class="roi-item">
@@ -173,7 +179,7 @@
         </section>
 
         <!-- Program Section -->
-        <section id="program" class="section bg-beige">
+        <section id="program" class="section bg-beige fade-in-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Programs</h2>
@@ -215,7 +221,7 @@
         </section>
 
         <!-- Evidence & Metrics Section -->
-        <section class="section">
+        <section class="section fade-in-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Evidence & Metrics</h2>
@@ -226,18 +232,19 @@
                         <thead>
                             <tr>
                                 <th>カテゴリ</th>
-                                <th>重視するKPI (Key Performance Indicators)</th>
+                                <th>重視する指標 (KPI)</th>
                                 <th>期待される効果</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- EDIT: B2C/B2B 表記を自然な表現に変更 -->
                             <tr>
-                                <td><strong>B2C (MVP)</strong></td>
+                                <td><strong>個人向けプログラム</strong></td>
                                 <td>NPS (推奨意向度)、継続率、LTV</td>
                                 <td>参加者の心理的負担軽減、学習満足度の向上</td>
                             </tr>
                             <tr>
-                                <td><strong>B2B (組織)</strong></td>
+                                <td><strong>組織向けプログラム</strong></td>
                                 <td>離職率、エンゲージメントスコア、採用コスト</td>
                                 <td>採用費用の抑制、組織風土の改善、定着率向上</td>
                             </tr>
@@ -248,7 +255,7 @@
         </section>
 
         <!-- Articles Section -->
-        <section id="articles" class="section bg-beige">
+        <section id="articles" class="section bg-beige fade-in-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Articles</h2>
@@ -269,13 +276,14 @@
                     </article>
                 </div>
                 <div class="text-center mt-4">
+                    <!-- EDIT: リンクをボタンライクにするよりはテキストリンクで知的に -->
                     <a href="#" class="text-link">noteですべての記事を見る →</a>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section">
+        <section id="about" class="section fade-in-section">
             <div class="container">
                 <div class="about-wrapper">
                     <div class="about-content">
@@ -289,7 +297,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section contact-section fade-in-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title text-white">Contact</h2>
@@ -299,8 +307,9 @@
                     <div class="form-group">
                         <label for="category">お問い合わせ種別</label>
                         <select id="category" name="category">
-                            <option value="b2c">【個人】プログラムへの参加・相談</option>
-                            <option value="b2b">【法人】研修・導入のご相談</option>
+                            <!-- EDIT: 選択肢の文言もB2C/B2Bを排除 -->
+                            <option value="personal">【個人】プログラムへの参加・相談</option>
+                            <option value="organization">【法人】研修・導入のご相談</option>
                             <option value="other">その他のお問い合わせ</option>
                         </select>
                     </div>
