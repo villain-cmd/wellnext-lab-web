@@ -20,7 +20,6 @@
         <div class="header__container">
             <h1 class="logo"><a href="#">WellNext Lab</a></h1>
             
-            <!-- EDIT: ナビゲーションを日本語中心に変更し、英語は補助的に記載 -->
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
@@ -28,10 +27,10 @@
             <nav class="nav" id="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">ホーム</a></li>
-                    <li class="nav__item"><a href="#individual" class="nav__link">看護師・学生の方へ</a></li>
-                    <li class="nav__item"><a href="#organization" class="nav__link">医療・教育機関の方へ</a></li>
+                    <li class="nav__item"><a href="#individual" class="nav__link">看護師の方へ</a></li>
+                    <li class="nav__item"><a href="#organization" class="nav__link">医療機関の方へ</a></li>
+                    <li class="nav__item"><a href="#program" class="nav__link">プログラム</a></li>
                     <li class="nav__item"><a href="#articles" class="nav__link">読みもの</a></li>
-                    <li class="nav__item"><a href="#profile" class="nav__link">代表プロフィール</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -40,17 +39,24 @@
 
     <main>
         <!-- Hero Section -->
-        <!-- EDIT: 左右2カラム構成にし、画像を配置して「実在感」を演出 -->
+        <!-- EDIT: 背景に動くオーブ（ambient-bg）を追加し、実写画像を配置 -->
         <section id="home" class="hero fade-in-section">
+            <div class="ambient-bg">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+            </div>
+            
             <div class="container hero__container">
                 <div class="hero__content">
                     <p class="hero__tagline">支える人が、支え続けられるために。</p>
-                    <h2 class="hero__title">対症療法ではなく<br>「予防・教育」の<br>ウェルネスラボ</h2>
+                    <h2 class="hero__title">
+                        対症療法ではなく、<br>
+                        <span class="highlight">「予防・教育」</span>の<br>
+                        ウェルネスラボ
+                    </h2>
                     <p class="hero__desc">
-                        看護師・看護学生のための<br>
-                        セルフマネジメント教育プログラム。<br>
-                        ひとりで抱え込まず、長く働き続けるための<br>
-                        「心の基礎体力」を育みます。
+                        看護師・看護学生のためのセルフマネジメント教育プログラム。<br>
+                        ひとりで抱え込まず、長く働き続けるための「心の基礎体力」を育みます。
                     </p>
                     <div class="hero__actions">
                         <a href="#individual" class="btn btn--primary">看護師・看護学生の方へ</a>
@@ -58,9 +64,9 @@
                     </div>
                 </div>
                 <div class="hero__visual">
-                    <!-- EDIT: 実際の画像が入る想定のプレースホルダー -->
-                    <div class="image-placeholder main-visual">
-                        <img src="https://placehold.co/600x400/2F5D62/FFFFFF?text=Image:+Nurses+Learning" alt="オンラインで学ぶ看護師たちの様子">
+                    <div class="image-frame">
+                        <!-- Unsplash Image: Medical team / Support -->
+                        <img src="https://images.unsplash.com/photo-1576091160550-2187d80a1a44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="笑顔で対話する医療従事者とメンターの様子">
                     </div>
                 </div>
             </div>
@@ -70,29 +76,42 @@
         <section class="section challenge fade-in-section">
             <div class="container">
                 <div class="section-header">
+                    <span class="badge">The Challenge</span>
                     <h2 class="section-title">看護職の課題</h2>
                     <p class="section-subtitle">そのしんどさは“個人の弱さ”ではなく、<br class="sp-only">構造の問題です。</p>
                 </div>
                 
-                <!-- EDIT: アイコン＋短文のカードで視認性を向上 -->
+                <!-- EDIT: オリジナルのSVGアイコンを使用したカードデザイン -->
                 <div class="grid-4">
-                    <div class="icon-card">
-                        <div class="icon-circle">❤️‍🩹</div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <!-- SVG Icon: Heart/Mind -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
                         <h3>精神的ストレス</h3>
                         <p>感情労働による<br>バーンアウトの常態化</p>
                     </div>
-                    <div class="icon-card">
-                        <div class="icon-circle">🏥</div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <!-- SVG Icon: Zap/Shock -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
                         <h3>リアリティショック</h3>
                         <p>理想と現実のギャップによる<br>早期離職</p>
                     </div>
-                    <div class="icon-card">
-                        <div class="icon-circle">💬</div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <!-- SVG Icon: Message/Communication -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </div>
                         <h3>人間関係</h3>
                         <p>閉鎖的な環境での<br>コミュニケーション不全</p>
                     </div>
-                    <div class="icon-card">
-                        <div class="icon-circle">🔮</div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <!-- SVG Icon: Compass/Future -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                        </div>
                         <h3>将来不安</h3>
                         <p>ロールモデル不在による<br>キャリアの迷い</p>
                     </div>
@@ -101,11 +120,11 @@
         </section>
 
         <!-- Individual Program (個人向け) -->
-        <!-- EDIT: 「BtoC」表記を排除し、具体的なプランカードを表示 -->
-        <section id="individual" class="section bg-beige fade-in-section">
+        <!-- EDIT: 視覚的な区切りを明確にし、具体的な内容をカード化 -->
+        <section id="individual" class="section bg-warm fade-in-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">個人向けプログラム</span>
+                    <span class="badge">For Personal</span>
                     <h2 class="section-title">看護師・看護学生の方へ</h2>
                     <p class="section-subtitle">感情労働に向き合うための「心の基礎体力」づくり</p>
                 </div>
@@ -114,8 +133,8 @@
                     <!-- Card 1 -->
                     <div class="card program-card">
                         <div class="card__header">
+                            <span class="card__tag">Entry</span>
                             <h3>基礎コース</h3>
-                            <span class="card__icon">🌱</span>
                         </div>
                         <p class="card__desc">自身のストレスタイプを知り、基礎的なセルフケアを学ぶ入門講座。</p>
                         <ul class="card__specs">
@@ -129,10 +148,10 @@
 
                     <!-- Card 2 -->
                     <div class="card program-card featured">
-                        <div class="card__label">人気</div>
+                        <div class="card__label">Recommended</div>
                         <div class="card__header">
+                            <span class="card__tag tag--accent">Standard</span>
                             <h3>実践・伴走コース</h3>
-                            <span class="card__icon">🤝</span>
                         </div>
                         <p class="card__desc">対話を通じて自己理解を深め、現場で使える対人スキルを習得します。</p>
                         <ul class="card__specs">
@@ -147,8 +166,8 @@
                     <!-- Card 3 -->
                     <div class="card program-card">
                         <div class="card__header">
+                            <span class="card__tag">Spot</span>
                             <h3>スポット相談</h3>
-                            <span class="card__icon">☕</span>
                         </div>
                         <p class="card__desc">「とりあえず話を聞いてほしい」という方のための個別セッション。</p>
                         <ul class="card__specs">
@@ -164,12 +183,12 @@
         </section>
 
         <!-- Organization Program (法人向け) -->
-        <!-- EDIT: 長い説明を避け、メリット重視のレイアウトへ -->
+        <!-- EDIT: 実写画像を使用し、信頼感を醸成するレイアウト -->
         <section id="organization" class="section fade-in-section">
             <div class="container">
                 <div class="split-layout reverse">
                     <div class="split-content">
-                        <span class="badge badge--dark">医療機関・教育機関向け</span>
+                        <span class="badge badge--dark">For Organization</span>
                         <h2 class="section-title text-left">人材定着・離職防止研修</h2>
                         <p class="lead-text">
                             看護師の離職は、組織にとって最大のコストです。<br>
@@ -195,8 +214,9 @@
                         </div>
                     </div>
                     <div class="split-visual">
-                        <div class="image-placeholder">
-                            <img src="https://placehold.co/500x600/EFEFE9/2F5D62?text=Image:+Training+Session" alt="研修風景のイメージ">
+                        <div class="image-frame">
+                            <!-- Unsplash Image: Meeting / Training -->
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="真剣な表情で研修を受けるスタッフたち">
                         </div>
                     </div>
                 </div>
@@ -204,17 +224,18 @@
         </section>
 
         <!-- Articles (読みもの) -->
-        <!-- EDIT: サムネイル画像枠を追加し、メディアサイトらしさを演出 -->
-        <section id="articles" class="section bg-beige fade-in-section">
+        <section id="articles" class="section bg-warm fade-in-section">
             <div class="container">
                 <div class="section-header">
+                    <span class="badge">Articles</span>
                     <h2 class="section-title">読みもの</h2>
                     <p class="section-subtitle">現場の声・コラム・お知らせ</p>
                 </div>
                 <div class="grid-3">
                     <article class="article-card">
                         <div class="article-thumb">
-                            <img src="https://placehold.co/400x250/cccccc/666666?text=Article+Thumbnail" alt="記事サムネイル">
+                            <!-- Unsplash Image: Writing / Notebook -->
+                            <img src="https://images.unsplash.com/photo-1456324504439-367cee110fa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ノートにペンを走らせる様子">
                         </div>
                         <div class="article-content">
                             <div class="article-meta">
@@ -226,7 +247,8 @@
                     </article>
                     <article class="article-card">
                         <div class="article-thumb">
-                            <img src="https://placehold.co/400x250/dcc/666?text=Interview+Thumbnail" alt="記事サムネイル">
+                            <!-- Unsplash Image: Woman smiling / Relief -->
+                            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="穏やかな表情の女性">
                         </div>
                         <div class="article-content">
                             <div class="article-meta">
@@ -238,7 +260,8 @@
                     </article>
                     <article class="article-card">
                         <div class="article-thumb">
-                            <img src="https://placehold.co/400x250/eee/999?text=News+Thumbnail" alt="記事サムネイル">
+                            <!-- Unsplash Image: Seminar / Team -->
+                            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="セミナーでの集合写真">
                         </div>
                         <div class="article-content">
                             <div class="article-meta">
@@ -260,7 +283,8 @@
             <div class="container">
                 <div class="profile-box">
                     <div class="profile-img">
-                        <img src="https://placehold.co/300x300/e0e0e0/888888?text=Founder+Photo" alt="代表顔写真">
+                         <!-- Unsplash Image: Founder Portrait (Placeholder) -->
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="代表顔写真">
                     </div>
                     <div class="profile-text">
                         <h2 class="section-title text-left">About Founder</h2>
@@ -274,11 +298,16 @@
             </div>
         </section>
 
-        <!-- Contact -->
+        <!-- Contact / CTA -->
+        <!-- EDIT: 最後のCTAにもambient-bgを追加し、クロージングの印象を強化 -->
         <section id="contact" class="section contact-section fade-in-section">
-            <div class="container">
+            <div class="ambient-bg ambient-bg--dark">
+                <div class="orb orb-3"></div>
+            </div>
+            
+            <div class="container contact-container">
                 <div class="section-header">
-                    <h2 class="section-title text-white">お問い合わせ</h2>
+                    <h2 class="section-title text-white">Contact Us</h2>
                     <p class="section-subtitle text-white">まずは気軽にご相談ください</p>
                 </div>
                 <form class="contact-form">
