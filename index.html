@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- EDIT: ディスクリプションをよりユーザー視点に修正 -->
     <meta name="description" content="支える人が、支え続けられるために。WellNext Labは看護職のバーンアウト予防とセルフマネジメント教育を提供するウェルネスラボです。">
     <title>WellNext Lab | 看護職のための予防・教育ウェルネスラボ</title>
     
@@ -11,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,298 +19,275 @@
     <header class="header" id="header">
         <div class="header__container">
             <h1 class="logo"><a href="#">WellNext Lab</a></h1>
+            
+            <!-- EDIT: ナビゲーションを日本語中心に変更し、英語は補助的に記載 -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            
             <nav class="nav" id="nav">
-                <!-- EDIT: ナビゲーションラベルを少し短くし、視認性を向上 -->
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#nurses" class="nav__link">For Nurses</a></li>
-                    <li class="nav__item"><a href="#organizations" class="nav__link">For Organizations</a></li>
-                    <li class="nav__item"><a href="#program" class="nav__link">Program</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link">ホーム</a></li>
+                    <li class="nav__item"><a href="#individual" class="nav__link">看護師・学生の方へ</a></li>
+                    <li class="nav__item"><a href="#organization" class="nav__link">医療・教育機関の方へ</a></li>
+                    <li class="nav__item"><a href="#articles" class="nav__link">読みもの</a></li>
+                    <li class="nav__item"><a href="#profile" class="nav__link">代表プロフィール</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">お問い合わせ</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニューを開く">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <!-- EDIT: fade-in-section クラスを追加（JSでアニメーション制御） -->
+        <!-- EDIT: 左右2カラム構成にし、画像を配置して「実在感」を演出 -->
         <section id="home" class="hero fade-in-section">
-            <div class="hero__content">
-                <p class="hero__tagline">支える人が、支え続けられるために。</p>
-                <h2 class="hero__title">WellNext Lab</h2>
-                <p class="hero__desc">
-                    対症療法ではなく、「予防・教育」へ。<br>
-                    看護師・看護学生のための<br class="sp-only">セルフマネジメント教育プログラム。
-                </p>
-                <div class="hero__actions">
-                    <a href="#nurses" class="btn btn--primary">看護師・看護学生の方へ</a>
-                    <a href="#organizations" class="btn btn--secondary">医療・教育機関の方へ</a>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <p class="hero__tagline">支える人が、支え続けられるために。</p>
+                    <h2 class="hero__title">対症療法ではなく<br>「予防・教育」の<br>ウェルネスラボ</h2>
+                    <p class="hero__desc">
+                        看護師・看護学生のための<br>
+                        セルフマネジメント教育プログラム。<br>
+                        ひとりで抱え込まず、長く働き続けるための<br>
+                        「心の基礎体力」を育みます。
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#individual" class="btn btn--primary">看護師・看護学生の方へ</a>
+                        <a href="#organization" class="btn btn--secondary">医療・教育機関の方へ</a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <!-- EDIT: 実際の画像が入る想定のプレースホルダー -->
+                    <div class="image-placeholder main-visual">
+                        <img src="https://placehold.co/600x400/2F5D62/FFFFFF?text=Image:+Nurses+Learning" alt="オンラインで学ぶ看護師たちの様子">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Problem Section -->
-        <section class="section problem fade-in-section">
+        <!-- Challenge Section (課題) -->
+        <section class="section challenge fade-in-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">The Challenge</h2>
-                    <p class="section-subtitle">看護職の燃え尽きと離職は、<br class="sp-only">防ぐことのできる課題です。</p>
-                </div>
-                <div class="problem__grid">
-                    <div class="problem__text">
-                        <p>日本の医療現場において、看護師の離職率は依然として高い水準にあります。その背景にあるのは、個人の「弱さ」ではなく、感情労働という職業特性と、それを支える構造的な教育の不足です。</p>
-                        <p>バーンアウト（燃え尽き症候群）による離職は、現場の疲弊を招くだけでなく、採用・育成コストの増大として病院経営にも大きな影響を与えています。</p>
-                    </div>
-                    <div class="problem__stats">
-                        <div class="stat-card">
-                            <span class="stat-label">新人看護師の離職率</span>
-                            <span class="stat-value">10.3<small>%</small></span>
-                            <span class="stat-source">※出典：日本看護協会調査データ等に基づく推計</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-label">慢性的な疲労感</span>
-                            <span class="stat-value">High</span>
-                            <span class="stat-desc">「感情労働」による<br>メンタル負荷の常態化</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Solution Section -->
-        <section class="section solution fade-in-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Our Solution</h2>
-                    <p class="section-subtitle">対症療法ではなく、“予防・教育”に特化した<br class="sp-only">ウェルネス・アプローチ</p>
-                </div>
-                <div class="solution__cards">
-                    <div class="card">
-                        <h3 class="card__title">Psycho-Education</h3>
-                        <p class="card__desc">心理教育。ストレスのメカニズムや感情労働の構造を知識として学び、自身の状態を客観視する力を養います。</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card__title">Coaching</h3>
-                        <p class="card__desc">コーチング。一方的な指導ではなく、対話を通じて自律的なキャリア形成とメンタル管理を伴走支援します。</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card__title">Community</h3>
-                        <p class="card__desc">コミュニティ。職場以外の心理的安全性のある「サードプレイス」を提供し、孤立を防ぎます。</p>
-                    </div>
-                </div>
-                <p class="note-text">※WellNext Labは医療行為ではなく、教育・キャリア支援・伴走支援を提供するプログラムです。</p>
-            </div>
-        </section>
-
-        <!-- For Nurses Section (Personal) -->
-        <!-- EDIT: BtoC表記を削除し、自然な日本語へ -->
-        <section id="nurses" class="section bg-beige fade-in-section">
-            <div class="container">
-                <div class="split-layout">
-                    <div class="split-content">
-                        <!-- EDIT: ラベル変更 -->
-                        <span class="badge">個人向けプログラム</span>
-                        <h2 class="section-title text-left">看護師・看護学生の方へ</h2>
-                        <h3 class="sub-heading">感情労働・人間関係・生活不安に向き合うための<br>セルフマネジメント教育</h3>
-                        <p>「自分さえ我慢すれば」と思っていませんか？<br>WellNext Labでは、長く健やかに働き続けるための「心の基礎体力」をつけるプログラムを提供しています。</p>
-                        <ul class="feature-list">
-                            <li>セルフマネジメント講座（オンライン少人数制）</li>
-                            <li>感情労働とストレス構造の理解</li>
-                            <li>リフレクションワーク（内省支援）</li>
-                            <li>オプション：個別伴走セッション</li>
-                        </ul>
-                        <a href="https://example.com/apply" class="btn btn--primary mt-4">プログラムに申し込む</a>
-                    </div>
-                    <div class="split-image nurse-img">
-                        <div class="abstract-circle"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- For Organizations Section (Business) -->
-        <!-- EDIT: BtoB / For Business 表記を削除 -->
-        <section id="organizations" class="section fade-in-section">
-            <div class="container">
-                <div class="section-header">
-                    <!-- EDIT: ラベル変更 -->
-                    <span class="badge badge--dark">法人・教育機関向け</span>
-                    <h2 class="section-title">医療機関・教育機関のご担当者さまへ</h2>
-                    <p class="section-subtitle">「人材定着」こそが、最強の経営戦略です。</p>
+                    <h2 class="section-title">看護職の課題</h2>
+                    <p class="section-subtitle">そのしんどさは“個人の弱さ”ではなく、<br class="sp-only">構造の問題です。</p>
                 </div>
                 
-                <div class="b2b-content">
-                    <div class="b2b-features">
-                        <h3>提供ソリューション</h3>
-                        <ul>
-                            <li><strong>実習・就職前セルフマネジメント研修：</strong> リアリティショックを軽減し、早期離職を防ぎます。</li>
-                            <li><strong>バーンアウト予防研修：</strong> 中堅・ベテラン層の燃え尽きを未然に防ぎます。</li>
-                            <li><strong>組織コンサルティング：</strong> 健康経営・人材定着施策としての制度設計を支援します。</li>
+                <!-- EDIT: アイコン＋短文のカードで視認性を向上 -->
+                <div class="grid-4">
+                    <div class="icon-card">
+                        <div class="icon-circle">❤️‍🩹</div>
+                        <h3>精神的ストレス</h3>
+                        <p>感情労働による<br>バーンアウトの常態化</p>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-circle">🏥</div>
+                        <h3>リアリティショック</h3>
+                        <p>理想と現実のギャップによる<br>早期離職</p>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-circle">💬</div>
+                        <h3>人間関係</h3>
+                        <p>閉鎖的な環境での<br>コミュニケーション不全</p>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-circle">🔮</div>
+                        <h3>将来不安</h3>
+                        <p>ロールモデル不在による<br>キャリアの迷い</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Program (個人向け) -->
+        <!-- EDIT: 「BtoC」表記を排除し、具体的なプランカードを表示 -->
+        <section id="individual" class="section bg-beige fade-in-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">個人向けプログラム</span>
+                    <h2 class="section-title">看護師・看護学生の方へ</h2>
+                    <p class="section-subtitle">感情労働に向き合うための「心の基礎体力」づくり</p>
+                </div>
+
+                <div class="program-cards">
+                    <!-- Card 1 -->
+                    <div class="card program-card">
+                        <div class="card__header">
+                            <h3>基礎コース</h3>
+                            <span class="card__icon">🌱</span>
+                        </div>
+                        <p class="card__desc">自身のストレスタイプを知り、基礎的なセルフケアを学ぶ入門講座。</p>
+                        <ul class="card__specs">
+                            <li><span>形式</span>オンライン / 全3回</li>
+                            <li><span>対象</span>学生・新人〜3年目</li>
                         </ul>
-                    </div>
-
-                    <div class="roi-box">
-                        <h3 class="roi-title">Cost of Turnover / 離職コストの考え方</h3>
-                        <p class="roi-desc">看護師1名の離職にかかるコストは、採用費・教育費・生産性低下を含めると甚大です。</p>
-                        <div class="roi-metrics">
-                            <div class="roi-item">
-                                <span class="roi-label">1人あたりの離職コスト概算</span>
-                                <span class="roi-value">約400〜500<small>万円</small></span>
-                            </div>
-                            <div class="roi-arrow">▼</div>
-                            <div class="roi-item highlight">
-                                <span class="roi-label">WellNext Lab導入による効果</span>
-                                <span class="roi-value">離職率低減による<br>コスト削減・定着率向上</span>
-                            </div>
+                        <div class="card__footer">
+                            <a href="#contact" class="btn btn--outline btn--full">詳しく見る</a>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="#contact" class="btn btn--secondary">法人導入・研修のご相談</a>
+
+                    <!-- Card 2 -->
+                    <div class="card program-card featured">
+                        <div class="card__label">人気</div>
+                        <div class="card__header">
+                            <h3>実践・伴走コース</h3>
+                            <span class="card__icon">🤝</span>
+                        </div>
+                        <p class="card__desc">対話を通じて自己理解を深め、現場で使える対人スキルを習得します。</p>
+                        <ul class="card__specs">
+                            <li><span>形式</span>グループ + 個別 / 3ヶ月</li>
+                            <li><span>対象</span>全キャリア対象</li>
+                        </ul>
+                        <div class="card__footer">
+                            <a href="#contact" class="btn btn--primary btn--full">詳しく見る</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card program-card">
+                        <div class="card__header">
+                            <h3>スポット相談</h3>
+                            <span class="card__icon">☕</span>
+                        </div>
+                        <p class="card__desc">「とりあえず話を聞いてほしい」という方のための個別セッション。</p>
+                        <ul class="card__specs">
+                            <li><span>形式</span>オンライン / 60分</li>
+                            <li><span>対象</span>どなたでも</li>
+                        </ul>
+                        <div class="card__footer">
+                            <a href="#contact" class="btn btn--outline btn--full">詳しく見る</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Program Section -->
-        <section id="program" class="section bg-beige fade-in-section">
+        <!-- Organization Program (法人向け) -->
+        <!-- EDIT: 長い説明を避け、メリット重視のレイアウトへ -->
+        <section id="organization" class="section fade-in-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Programs</h2>
-                    <p class="section-subtitle">フェーズに合わせた3つのプラン</p>
-                </div>
-                <div class="program-grid">
-                    <div class="program-card">
-                        <div class="program-header">Entry</div>
-                        <div class="program-body">
-                            <h4>個人向け・基礎プログラム</h4>
-                            <p class="price">10,000円〜 / 月</p>
-                            <p class="target">対象：看護学生・若手看護師</p>
-                            <hr>
-                            <p>自身のストレスタイプを知り、基礎的なセルフケアを学ぶオンライン講座。</p>
+                <div class="split-layout reverse">
+                    <div class="split-content">
+                        <span class="badge badge--dark">医療機関・教育機関向け</span>
+                        <h2 class="section-title text-left">人材定着・離職防止研修</h2>
+                        <p class="lead-text">
+                            看護師の離職は、組織にとって最大のコストです。<br>
+                            「個人の問題」で片付けず、組織として予防に取り組みませんか？
+                        </p>
+                        <ul class="check-list">
+                            <li>実習・就職前の「リアリティショック」軽減</li>
+                            <li>中堅・ベテラン層のバーンアウト予防</li>
+                            <li>心理的安全性の高いチームビルディング</li>
+                        </ul>
+                        
+                        <!-- 簡易ROI -->
+                        <div class="roi-simple">
+                            <div class="roi-row">
+                                <span class="roi-label">1名離職の損失コスト</span>
+                                <span class="roi-value">約400〜500万円</span>
+                            </div>
+                            <p class="roi-note">※採用費・教育費・生産性低下を含む概算</p>
+                        </div>
+
+                        <div class="action-area">
+                            <a href="#contact" class="btn btn--primary">研修資料請求・ご相談</a>
                         </div>
                     </div>
-                    <div class="program-card featured">
-                        <div class="program-header">Standard</div>
-                        <div class="program-body">
-                            <h4>部署・チーム単位研修</h4>
-                            <p class="price">要見積もり</p>
-                            <p class="target">対象：病棟単位・少人数チーム</p>
-                            <hr>
-                            <p>チームビルディングと相互理解を含めた、心理的安全性醸成ワークショップ。</p>
-                        </div>
-                    </div>
-                    <div class="program-card">
-                        <div class="program-header">Premium</div>
-                        <div class="program-body">
-                            <h4>組織全体・包括支援</h4>
-                            <p class="price">要見積もり</p>
-                            <p class="target">対象：病院全体・看護学校</p>
-                            <hr>
-                            <p>年間を通じたカリキュラム設計、リーダー層へのコーチング、効果測定。</p>
+                    <div class="split-visual">
+                        <div class="image-placeholder">
+                            <img src="https://placehold.co/500x600/EFEFE9/2F5D62?text=Image:+Training+Session" alt="研修風景のイメージ">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Evidence & Metrics Section -->
-        <section class="section fade-in-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Evidence & Metrics</h2>
-                    <p class="section-subtitle">効果の可視化と、見るべき指標</p>
-                </div>
-                <div class="metrics-table-wrapper">
-                    <table class="metrics-table">
-                        <thead>
-                            <tr>
-                                <th>カテゴリ</th>
-                                <th>重視する指標 (KPI)</th>
-                                <th>期待される効果</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- EDIT: B2C/B2B 表記を自然な表現に変更 -->
-                            <tr>
-                                <td><strong>個人向けプログラム</strong></td>
-                                <td>NPS (推奨意向度)、継続率、LTV</td>
-                                <td>参加者の心理的負担軽減、学習満足度の向上</td>
-                            </tr>
-                            <tr>
-                                <td><strong>組織向けプログラム</strong></td>
-                                <td>離職率、エンゲージメントスコア、採用コスト</td>
-                                <td>採用費用の抑制、組織風土の改善、定着率向上</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Articles Section -->
+        <!-- Articles (読みもの) -->
+        <!-- EDIT: サムネイル画像枠を追加し、メディアサイトらしさを演出 -->
         <section id="articles" class="section bg-beige fade-in-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Articles</h2>
-                    <p class="section-subtitle">読みもの・コラム</p>
+                    <h2 class="section-title">読みもの</h2>
+                    <p class="section-subtitle">現場の声・コラム・お知らせ</p>
                 </div>
-                <div class="articles-grid">
+                <div class="grid-3">
                     <article class="article-card">
-                        <div class="article-meta">2025.10.15 | Column</div>
-                        <h3 class="article-title">なぜ「エビデンスに基づく」メンタルヘルス教育が必要なのか</h3>
+                        <div class="article-thumb">
+                            <img src="https://placehold.co/400x250/cccccc/666666?text=Article+Thumbnail" alt="記事サムネイル">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="tag">コラム</span>
+                                <time>2025.10.15</time>
+                            </div>
+                            <h3 class="article-title">なぜ「エビデンスに基づく」メンタルヘルス教育が必要なのか</h3>
+                        </div>
                     </article>
                     <article class="article-card">
-                        <div class="article-meta">2025.10.01 | Interview</div>
-                        <h3 class="article-title">【卒業生の声】「辞めたい」と思っていた私が、もう一度看護に向き合えた理由</h3>
+                        <div class="article-thumb">
+                            <img src="https://placehold.co/400x250/dcc/666?text=Interview+Thumbnail" alt="記事サムネイル">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="tag">インタビュー</span>
+                                <time>2025.10.01</time>
+                            </div>
+                            <h3 class="article-title">「辞めたい」と思っていた私が、もう一度看護に向き合えた理由</h3>
+                        </div>
                     </article>
                     <article class="article-card">
-                        <div class="article-meta">2025.09.20 | News</div>
-                        <h3 class="article-title">WellNext Lab 第3期生のエントリー受付を開始しました</h3>
+                        <div class="article-thumb">
+                            <img src="https://placehold.co/400x250/eee/999?text=News+Thumbnail" alt="記事サムネイル">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="tag">お知らせ</span>
+                                <time>2025.09.20</time>
+                            </div>
+                            <h3 class="article-title">WellNext Lab 第3期生のエントリー受付を開始しました</h3>
+                        </div>
                     </article>
                 </div>
-                <div class="text-center mt-4">
-                    <!-- EDIT: リンクをボタンライクにするよりはテキストリンクで知的に -->
+                <div class="text-center mt-5">
                     <a href="#" class="text-link">noteですべての記事を見る →</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section fade-in-section">
+        <!-- Profile -->
+        <section id="profile" class="section fade-in-section">
             <div class="container">
-                <div class="about-wrapper">
-                    <div class="about-content">
-                        <h2 class="section-title text-left">About WellNext Lab</h2>
-                        <h3 class="founder-name">Founder / 代表</h3>
-                        <p>精神科看護師としての臨床経験と、看護教育現場での指導経験を持つ。現場で繰り返される「真面目な人ほど潰れていく」現実に課題を感じ、WellNext Labを設立。</p>
-                        <p>医療的な治療が必要になる手前の「教育」と「予防」こそが、持続可能な医療現場を作ると確信し、医学・心理学に基づいたプログラム開発を行う。</p>
+                <div class="profile-box">
+                    <div class="profile-img">
+                        <img src="https://placehold.co/300x300/e0e0e0/888888?text=Founder+Photo" alt="代表顔写真">
+                    </div>
+                    <div class="profile-text">
+                        <h2 class="section-title text-left">About Founder</h2>
+                        <h3 class="founder-name">代表プロフィール</h3>
+                        <p class="founder-bio">
+                            精神科看護師としての臨床経験と、看護教育現場での指導経験を持つ。<br>
+                            「真面目な人ほど潰れていく」現場の現実に課題を感じ、医療的な治療が必要になる手前の「教育」と「予防」の重要性を痛感。医学・心理学に基づいたプログラム開発を行う。
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section id="contact" class="section contact-section fade-in-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title text-white">Contact</h2>
-                    <p class="section-subtitle text-white">お問い合わせ・ご相談</p>
+                    <h2 class="section-title text-white">お問い合わせ</h2>
+                    <p class="section-subtitle text-white">まずは気軽にご相談ください</p>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <label for="category">お問い合わせ種別</label>
+                        <label for="category">ご相談内容</label>
                         <select id="category" name="category">
-                            <!-- EDIT: 選択肢の文言もB2C/B2Bを排除 -->
-                            <option value="personal">【個人】プログラムへの参加・相談</option>
+                            <option value="individual">【個人】プログラムへの参加・相談</option>
                             <option value="organization">【法人】研修・導入のご相談</option>
-                            <option value="other">その他のお問い合わせ</option>
+                            <option value="media">取材・その他</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -319,16 +296,15 @@
                     </div>
                     <div class="form-group">
                         <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" placeholder="example@wellnext-lab.com">
+                        <input type="email" id="email" name="email" placeholder="email@example.com">
                     </div>
                     <div class="form-group">
-                        <label for="message">お問い合わせ内容</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" name="message" rows="4" placeholder="ご自由にお書きください"></textarea>
                     </div>
                     <div class="text-center">
                         <button type="button" class="btn btn--primary btn--submit">送信する</button>
                     </div>
-                    <p class="form-note">※これはデモサイトのため、実際に送信は行われません。</p>
                 </form>
             </div>
         </section>
@@ -336,17 +312,18 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
+        <div class="container footer__container">
+            <div class="footer__brand">
                 <div class="footer__logo">WellNext Lab</div>
-                <nav class="footer__nav">
-                    <a href="#">プライバシーポリシー</a>
-                    <a href="#">特定商取引法に基づく表記</a>
-                    <a href="#">免責事項</a>
-                </nav>
+                <p class="footer__tagline">支える人が、支え続けられるために。</p>
             </div>
-            <p class="copyright">&copy; 2025 WellNext Lab. All Rights Reserved.</p>
+            <nav class="footer__nav">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">特定商取引法に基づく表記</a>
+                <a href="#">運営会社</a>
+            </nav>
         </div>
+        <p class="copyright">&copy; 2025 WellNext Lab. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
