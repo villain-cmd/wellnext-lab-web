@@ -1,360 +1,547 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="支える人が、支え続けられるために。WellNext Labは看護職のバーンアウト予防とセルフマネジメント教育を提供するウェルネスラボです。">
-    <title>WellNext Lab | 看護職のための予防・教育ウェルネスラボ</title>
-    
-    <!-- Google Fonts: Noto Sans JP -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellNext Nursing Lab | 医療の現場に、コーチングの力を。</title>
+  <meta name="description" content="看護師一人ひとりが輝き、チームが変わる。医療機関の成長を、私たちが伴走します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header__container">
-            <h1 class="logo"><a href="#">WellNext Lab</a></h1>
-            
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-            
-            <nav class="nav" id="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">ホーム</a></li>
-                    <li class="nav__item"><a href="#individual" class="nav__link">看護師の方へ</a></li>
-                    <li class="nav__item"><a href="#organization" class="nav__link">医療機関の方へ</a></li>
-                    <li class="nav__item"><a href="#program" class="nav__link">プログラム</a></li>
-                    <li class="nav__item"><a href="#articles" class="nav__link">メディア</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">お問い合わせ</a></li>
-                </ul>
-            </nav>
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
+  <header id="header">
+    <div class="container header-inner">
+
+      <a href="#" class="logo">
+        <svg class="logo-w" width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#A855F7"/>
+              <stop offset="40%"  stop-color="#06B6D4"/>
+              <stop offset="75%"  stop-color="#10B981"/>
+              <stop offset="100%" stop-color="#EAB308"/>
+            </linearGradient>
+          </defs>
+          <path d="M5 10 L13 36 L21 18 L24 26 L27 18 L35 36 L43 10"
+                stroke="url(#lg1)" stroke-width="5.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-main">WellNext</span>
+          <span class="logo-sub">Nursing Lab <span class="logo-badge">WNL</span></span>
         </div>
-    </header>
+      </a>
 
-    <main>
-        <!-- Hero Section -->
-        <!-- EDIT: 背景に動くオーブ（ambient-bg）を追加し、実写画像を配置 -->
-        <section id="home" class="hero fade-in-section">
-            <div class="ambient-bg">
-                <div class="orb orb-1"></div>
-                <div class="orb orb-2"></div>
-            </div>
-            
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <p class="hero__tagline">支える人が、支え続けられるために。</p>
-                    <h2 class="hero__title">
-                        対症療法ではなく、<br>
-                        <span class="highlight">「予防・教育」</span>の<br>
-                        ウェルネスラボ
-                    </h2>
-                    <p class="hero__desc">
-                        看護師・看護学生のためのセルフマネジメント教育プログラム。<br>
-                        ひとりで抱え込まず、長く働き続けるための「心の基礎体力」を育みます。
-                    </p>
-                    <div class="hero__actions">
-                        <a href="#individual" class="btn btn--primary">看護師・看護学生の方へ</a>
-                        <a href="#organization" class="btn btn--secondary">医療・教育機関の方へ</a>
-                    </div>
-                </div>
-                <div class="hero__visual">
-                    <div class="image-frame">
-                        <!-- Unsplash Image: Medical team / Support -->
-                        <img src="images/fv.jpg" alt="笑顔で対話する医療従事者とメンターの様子">
-                    </div>
-                </div>
-            </div>
-        </section>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#results">導入実績</a></li>
+          <li><a href="#strength">強み</a></li>
+          <li><a href="#price">料金</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
 
-        <!-- Challenge Section (課題) -->
-        <section class="section challenge fade-in-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="badge">The Challenge</span>
-                    <h2 class="section-title">看護職の課題</h2>
-                    <p class="section-subtitle">そのしんどさは“個人の弱さ”ではなく、<br class="sp-only">構造の問題です。</p>
-                </div>
-                
-                <!-- EDIT: オリジナルのSVGアイコンを使用したカードデザイン -->
-                <div class="grid-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <!-- SVG Icon: Heart/Mind -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <h3>精神的ストレス</h3>
-                        <p>感情労働による<br>バーンアウトの常態化</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <!-- SVG Icon: Zap/Shock -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                        </div>
-                        <h3>リアリティショック</h3>
-                        <p>理想と現実のギャップによる<br>早期離職</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <!-- SVG Icon: Message/Communication -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                        </div>
-                        <h3>人間関係</h3>
-                        <p>閉鎖的な環境での<br>コミュニケーション不全</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <!-- SVG Icon: Compass/Future -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-                        </div>
-                        <h3>将来不安</h3>
-                        <p>ロールモデル不在による<br>キャリアの迷い</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <a href="#contact" class="btn btn-primary btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,5 12,13 21,5"/></svg>
+        無料相談を申し込む
+      </a>
 
-        <!-- Individual Program (個人向け) -->
-        <!-- EDIT: 視覚的な区切りを明確にし、具体的な内容をカード化 -->
-        <section id="individual" class="section bg-warm fade-in-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="badge">For Personal</span>
-                    <h2 class="section-title">看護師・看護学生の方へ</h2>
-                    <p class="section-subtitle">感情労働に向き合うための「心の基礎体力」づくり</p>
-                </div>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
 
-                <div class="program-cards">
-                    <!-- Card 1 -->
-                    <div class="card program-card">
-                        <div class="card__header">
-                            <span class="card__tag">Entry</span>
-                            <h3>基礎コース</h3>
-                        </div>
-                        <p class="card__desc">自身のストレスタイプを知り、基礎的なセルフケアを学ぶ入門講座。</p>
-                        <ul class="card__specs">
-                            <li><span>形式</span>オンライン / 全3回</li>
-                            <li><span>対象</span>学生・新人〜3年目</li>
-                        </ul>
-                        <div class="card__footer">
-                            <a href="#contact" class="btn btn--outline btn--full">詳しく見る</a>
-                        </div>
-                    </div>
+    </div>
+  </header>
 
-                    <!-- Card 2 -->
-                    <div class="card program-card featured">
-                        <div class="card__label">Recommended</div>
-                        <div class="card__header">
-                            <span class="card__tag tag--accent">Standard</span>
-                            <h3>実践・伴走コース</h3>
-                        </div>
-                        <p class="card__desc">対話を通じて自己理解を深め、現場で使える対人スキルを習得します。</p>
-                        <ul class="card__specs">
-                            <li><span>形式</span>グループ + 個別 / 3ヶ月</li>
-                            <li><span>対象</span>全キャリア対象</li>
-                        </ul>
-                        <div class="card__footer">
-                            <a href="#contact" class="btn btn--primary btn--full">詳しく見る</a>
-                        </div>
-                    </div>
+  <main>
 
-                    <!-- Card 3 -->
-                    <div class="card program-card">
-                        <div class="card__header">
-                            <span class="card__tag">Spot</span>
-                            <h3>スポット相談</h3>
-                        </div>
-                        <p class="card__desc">「とりあえず話を聞いてほしい」という方のための個別セッション。</p>
-                        <ul class="card__specs">
-                            <li><span>形式</span>オンライン / 60分</li>
-                            <li><span>対象</span>どなたでも</li>
-                        </ul>
-                        <div class="card__footer">
-                            <a href="#contact" class="btn btn--outline btn--full">詳しく見る</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section class="hero" id="home">
 
-        <!-- Organization Program (法人向け) -->
-        <!-- EDIT: 実写画像を使用し、信頼感を醸成するレイアウト -->
-        <section id="organization" class="section fade-in-section">
-            <div class="container">
-                <div class="split-layout reverse">
-                    <div class="split-content">
-                        <span class="badge badge--dark">For Organization</span>
-                        <h2 class="section-title text-left">人材定着・離職防止研修</h2>
-                        <p class="lead-text">
-                            看護師の離職は、組織にとって最大のコストです。<br>
-                            「個人の問題」で片付けず、組織として予防に取り組みませんか？
-                        </p>
-                        <ul class="check-list">
-                            <li>実習・就職前の「リアリティショック」軽減</li>
-                            <li>中堅・ベテラン層のバーンアウト予防</li>
-                            <li>心理的安全性の高いチームビルディング</li>
-                        </ul>
-                        
-                        <!-- 簡易ROI -->
-                        <div class="roi-simple">
-                            <div class="roi-row">
-                                <span class="roi-label">1名離職の損失コスト</span>
-                                <span class="roi-value">約400〜500万円</span>
-                            </div>
-                            <p class="roi-note">※採用費・教育費・生産性低下を含む概算</p>
-                        </div>
+      <!-- Blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
 
-                        <div class="action-area">
-                            <a href="#contact" class="btn btn--primary">研修資料請求・ご相談</a>
-                        </div>
-                    </div>
-                    <div class="split-visual">
-                        <div class="image-frame">
-                            <!-- Unsplash Image: Meeting / Training -->
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="真剣な表情で研修を受けるスタッフたち">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Sparkle SVG decorations -->
+      <svg class="hero-sparkle hero-sparkle-a" width="32" height="32" viewBox="0 0 32 32" fill="none" style="position:absolute;top:18%;left:12%;pointer-events:none;opacity:0.5;">
+        <path d="M16 2 L17.5 14.5 L30 16 L17.5 17.5 L16 30 L14.5 17.5 L2 16 L14.5 14.5 Z" fill="#FF4EA3"/>
+      </svg>
+      <svg class="hero-sparkle hero-sparkle-b" width="22" height="22" viewBox="0 0 32 32" fill="none" style="position:absolute;top:60%;right:22%;pointer-events:none;opacity:0.4;">
+        <path d="M16 2 L17.5 14.5 L30 16 L17.5 17.5 L16 30 L14.5 17.5 L2 16 L14.5 14.5 Z" fill="#00C9A7"/>
+      </svg>
+      <svg class="hero-sparkle hero-sparkle-c" width="18" height="18" viewBox="0 0 32 32" fill="none" style="position:absolute;bottom:20%;left:30%;pointer-events:none;opacity:0.35;">
+        <path d="M16 2 L17.5 14.5 L30 16 L17.5 17.5 L16 30 L14.5 17.5 L2 16 L14.5 14.5 Z" fill="#FFDD00"/>
+      </svg>
 
-        <!-- Articles (メディア) -->
-        <section id="articles" class="section bg-warm fade-in-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="badge">Articles</span>
-                    <h2 class="section-title">メディア</h2>
-                    <p class="section-subtitle">現場の声・コラム・お知らせ</p>
-                </div>
-                <div class="grid-3">
-                    <article class="article-card">
-                        <div class="article-thumb">
-                            <!-- Unsplash Image: Writing / Notebook -->
-                            <img src="images/pen.jpg" alt="ノートにペンを走らせる様子">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="tag">コラム</span>
-                                <time>2025.10.15</time>
-                            </div>
-                            <h3 class="article-title">なぜ「エビデンスに基づく」メンタルヘルス教育が必要なのか</h3>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-thumb">
-                            <!-- Unsplash Image: Woman smiling / Relief -->
-                            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="穏やかな表情の女性">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="tag">インタビュー</span>
-                                <time>2025.10.01</time>
-                            </div>
-                            <h3 class="article-title">「辞めたい」と思っていた私が、もう一度看護に向き合えた理由</h3>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-thumb">
-                            <!-- Unsplash Image: Seminar / Team -->
-                            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="セミナーでの集合写真">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="tag">お知らせ</span>
-                                <time>2025.09.20</time>
-                            </div>
-                            <h3 class="article-title">WellNext Lab 第3期生のエントリー受付を開始しました</h3>
-                        </div>
-                    </article>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="#" class="text-link">noteですべての記事を見る →</a>
-                </div>
-            </div>
-        </section>
+      <div class="container hero-inner">
 
-        <!-- Profile -->
-        <section id="profile" class="section fade-in-section">
-            <div class="container">
-                <div class="profile-box">
-                    <div class="profile-img">
-                         <!-- Unsplash Image: Founder Portrait (Placeholder) -->
-                        <img src="images/face.jpg" alt="代表顔写真">
-                    </div>
-                    <div class="profile-text">
-                        <h2 class="section-title text-left">About Founder</h2>
-                        <h3 class="founder-name">代表プロフィール</h3>
-                        <p class="founder-bio">
-                            精神科看護師としての臨床経験と、看護教育現場での指導経験を持つ。<br>
-                            「真面目な人ほど潰れていく」現場の現実に課題を感じ、医療的な治療が必要になる手前の「教育」と「予防」の重要性を痛感。医学・心理学に基づいたプログラム開発を行う。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact / CTA -->
-        <!-- EDIT: 最後のCTAにもambient-bgを追加し、クロージングの印象を強化 -->
-        <section id="contact" class="section contact-section fade-in-section">
-            <div class="ambient-bg ambient-bg--dark">
-                <div class="orb orb-3"></div>
-            </div>
-            
-            <div class="container contact-container">
-                <div class="section-header">
-                    <h2 class="section-title text-white">Contact Us</h2>
-                    <p class="section-subtitle text-white">まずは気軽にご相談ください</p>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="category">ご相談内容</label>
-                        <select id="category" name="category">
-                            <option value="individual">【個人】プログラムへの参加・相談</option>
-                            <option value="organization">【法人】研修・導入のご相談</option>
-                            <option value="media">取材・その他</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">お名前 / 貴社名</label>
-                        <input type="text" id="name" name="name" placeholder="例：ウェルネス 花子">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" placeholder="email@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">メッセージ</label>
-                        <textarea id="message" name="message" rows="4" placeholder="ご自由にお書きください"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn--primary btn--submit">送信する</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__brand">
-                <div class="footer__logo">WellNext Lab</div>
-                <p class="footer__tagline">支える人が、支え続けられるために。</p>
-            </div>
-            <nav class="footer__nav">
-                <a href="#">プライバシーポリシー</a>
-                <a href="#">特定商取引法に基づく表記</a>
-                <a href="#">運営会社</a>
-            </nav>
+        <div class="hero-content">
+          <p class="hero-tagline">
+            未来をつくるのは、<br>「人」と「チーム」。
+          </p>
+          <h1 class="hero-headline">
+            <span class="line-dark">医療の現場に、</span>
+            <span class="line-gradient">コーチングの力を。</span>
+          </h1>
+          <p class="hero-desc">
+            看護師一人ひとりが輝き、チームが変わる。<br>
+            医療機関の成長を、私たちが伴走します。
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,5 12,13 21,5"/></svg>
+              無料相談を申し込む
+            </a>
+            <a href="#" class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              サービス資料をダウンロード
+            </a>
+          </div>
         </div>
-        <p class="copyright">&copy; 2025 WellNext Lab. All Rights Reserved.</p>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="hero-visual">
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-ring"></div>
+            <div class="hero-photo-circle">
+              <div class="photo-placeholder photo-nurse-main">看護師メイン写真</div>
+            </div>
+            <div class="coaching-badge">
+              <span>Coaching</span>
+              <span>Empowers</span>
+              <span>Care</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SERVICE
+    ══════════════════════════════════════ -->
+    <section class="section section-service" id="service">
+      <div class="section-watermark">SERVICE</div>
+
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="section-header">
+          <h2 class="section-title">サービス紹介</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="service-grid">
+
+          <!-- 組織コーチング -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="20" r="10" fill="#FFD6EC" stroke="#FF4EA3" stroke-width="2"/>
+                <circle cx="16" cy="46" r="9"  fill="#FFD6EC" stroke="#FF4EA3" stroke-width="2"/>
+                <circle cx="54" cy="46" r="9"  fill="#FFD6EC" stroke="#FF4EA3" stroke-width="2"/>
+                <line x1="35" y1="30" x2="16" y2="37" stroke="#FF4EA3" stroke-width="1.8" stroke-dasharray="3 2"/>
+                <line x1="35" y1="30" x2="54" y2="37" stroke="#FF4EA3" stroke-width="1.8" stroke-dasharray="3 2"/>
+                <circle cx="35" cy="20" r="4" fill="#FF4EA3"/>
+                <circle cx="16" cy="46" r="4" fill="#FF82C4"/>
+                <circle cx="54" cy="46" r="4" fill="#FF82C4"/>
+              </svg>
+            </div>
+            <h3>組織コーチング</h3>
+            <p>ビジョン共有・対話を通じて、チーム全体の関係と成長を育てます。</p>
+            <a href="#contact" class="service-btn" aria-label="組織コーチングの詳細">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <!-- リーダーシップ開発 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="26" r="11" fill="#C8F7EE" stroke="#00C9A7" stroke-width="2"/>
+                <path d="M18 58 C18 46 52 46 52 58" stroke="#00C9A7" stroke-width="2" fill="none"/>
+                <path d="M44 17 L51 10 M47 24 L56 24 M40 12 L40 4" stroke="#00C9A7" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="35" cy="26" r="5" fill="#00C9A7"/>
+              </svg>
+            </div>
+            <h3>リーダーシップ開発</h3>
+            <p>現場師長・リーダーの在り方を整え、自律して動ける組織をつくります。</p>
+            <a href="#contact" class="service-btn service-btn-teal" aria-label="リーダーシップ開発の詳細">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <!-- 個別コーチング -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="10" fill="#FFE0CC" stroke="#FF8A48" stroke-width="2"/>
+                <circle cx="46" cy="28" r="9"  fill="#FFD6EC" stroke="#FF4EA3" stroke-width="2"/>
+                <path d="M10 56 C10 44 38 44 38 56" stroke="#FF8A48" stroke-width="2" fill="none"/>
+                <path d="M34 50 C34 40 60 40 60 50" stroke="#FF4EA3" stroke-width="2" fill="none"/>
+                <circle cx="24" cy="24" r="4" fill="#FF8A48"/>
+                <circle cx="46" cy="28" r="4" fill="#FF4EA3"/>
+              </svg>
+            </div>
+            <h3>個別コーチング</h3>
+            <p>看護師一人ひとりの強みに合わせたキャリアとやりがいをサポート。</p>
+            <a href="#contact" class="service-btn service-btn-orange" aria-label="個別コーチングの詳細">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         RESULTS
+    ══════════════════════════════════════ -->
+    <section class="section section-results" id="results">
+      <div class="section-watermark">RESULTS</div>
+
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="results-intro">
+          <h2 class="section-title">導入実績</h2>
+          <p>多くの医療機関様で成果を出しています。</p>
+          <a href="#contact" class="btn btn-teal">
+            すべての実績を見る
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="results-grid">
+
+          <div class="result-card">
+            <div class="case-badge">
+              <span>CASE</span>
+              <span>01</span>
+            </div>
+            <div class="result-photo">
+              <div class="photo-placeholder photo-hospital-1">200床規模 総合病院</div>
+            </div>
+            <h4>200床規模 総合病院</h4>
+            <div class="result-stat">離職率が <strong>24%→8%</strong> に改善</div>
+            <span class="result-tag">組織コーチング</span>
+          </div>
+
+          <div class="result-card">
+            <div class="case-badge case-badge-2">
+              <span>CASE</span>
+              <span>02</span>
+            </div>
+            <div class="result-photo">
+              <div class="photo-placeholder photo-hospital-2">150床規模 病院</div>
+            </div>
+            <h4>150床規模 病院</h4>
+            <div class="result-stat">新人看護師の定着率<br><strong>65%→92%</strong> に向上</div>
+            <span class="result-tag result-tag-teal">リーダーシップ開発</span>
+          </div>
+
+          <div class="result-card">
+            <div class="case-badge case-badge-3">
+              <span>CASE</span>
+              <span>03</span>
+            </div>
+            <div class="result-photo">
+              <div class="photo-placeholder photo-hospital-3">クリニック（在宅部門）</div>
+            </div>
+            <h4>クリニック（在宅部門）</h4>
+            <div class="result-stat">スタッフ満足度 <strong>63%→95%</strong> に向上</div>
+            <span class="result-tag result-tag-orange">個別コーチング</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STRENGTH
+    ══════════════════════════════════════ -->
+    <section class="section section-strength" id="strength">
+      <div class="section-watermark">STRENGTH</div>
+
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="section-header">
+          <h2 class="section-title">WellNext Nursing Lab<br>が選ばれる理由</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="strength-grid">
+
+          <div class="strength-item">
+            <div class="strength-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="26" fill="#FFF0F6" stroke="#FF4EA3" stroke-width="1.5"/>
+                <path d="M28 16 C22 16 17 21 17 27 C17 33 22 38 28 38" stroke="#FF4EA3" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M28 16 C34 16 39 21 39 27 C39 33 34 38 28 38" stroke="#FF82C4" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="28" cy="24" r="3" fill="#FF4EA3"/>
+                <path d="M22 32 C22 28 34 28 34 32" stroke="#FF4EA3" stroke-width="1.5" fill="none"/>
+                <path d="M36 15 L40 19 L44 13" stroke="#00C9A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h4>医療に特化した専門性</h4>
+            <p>医療・看護の現場を深く理解したコーチが、現場目線でサポートします。</p>
+          </div>
+
+          <div class="strength-item">
+            <div class="strength-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="26" fill="#F0FFF9" stroke="#00C9A7" stroke-width="1.5"/>
+                <circle cx="28" cy="22" r="6" fill="#C8F7EE" stroke="#00C9A7" stroke-width="1.5"/>
+                <path d="M17 42 C17 34 39 34 39 42" stroke="#00C9A7" stroke-width="2" fill="none"/>
+                <path d="M14 26 L20 26 M14 30 L18 30" stroke="#00C9A7" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M36 26 L42 26 M38 30 L42 30" stroke="#00C9A7" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h4>現場に寄り添う実践力</h4>
+            <p>理論だけでなく、現場で機能する実践的な対話とサポートを提供します。</p>
+          </div>
+
+          <div class="strength-item">
+            <div class="strength-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="26" fill="#FFFCE0" stroke="#FFB830" stroke-width="1.5"/>
+                <polyline points="14,38 20,28 26,32 32,20 38,24 44,16" stroke="#FFB830" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="44" cy="16" r="3.5" fill="#FFB830"/>
+                <circle cx="26" cy="32" r="2.5" fill="#FFD700"/>
+              </svg>
+            </div>
+            <h4>確かな実績と信頼</h4>
+            <p>多くの医療機関での導入実績と、数字で見える成果が信頼の証です。</p>
+          </div>
+
+          <div class="strength-item">
+            <div class="strength-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="26" fill="#F5F0FF" stroke="#A855F7" stroke-width="1.5"/>
+                <path d="M28 18 C22 18 18 22 18 28 C18 34 22 38 28 38 C34 38 38 34 38 28 C38 22 34 18 28 18Z" stroke="#A855F7" stroke-width="1.5" fill="none"/>
+                <path d="M28 22 L28 34 M22 28 L34 28" stroke="#A855F7" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 20 L16 16 M36 20 L40 16 M20 36 L16 40 M36 36 L40 40" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h4>安心のサポート体制</h4>
+            <p>初めての方でも安心の丁寧なオンボーディングと継続サポートを提供します。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PRICE
+    ══════════════════════════════════════ -->
+    <section class="section section-price" id="price">
+      <div class="section-watermark">PRICE</div>
+
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="section-header">
+          <h2 class="section-title">料金プラン</h2>
+          <div class="title-underline"></div>
+          <p>貴院の課題や規模に合わせて、最適なプランをご提案します。</p>
+        </div>
+
+        <div class="price-grid">
+
+          <div class="price-card">
+            <h3 class="plan-name">スポット相談</h3>
+            <p class="plan-duration">単発セッション（90分）</p>
+            <div class="plan-price">¥ 30,000<span>〜</span></div>
+            <ul class="plan-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                課題の整理・ヒアリング
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                改善のヒントをご提案
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card price-card-featured">
+            <div class="popular-badge">人気 No.1</div>
+            <h3 class="plan-name">伴走プラン</h3>
+            <p class="plan-duration">3ヶ月サポート</p>
+            <div class="plan-price">¥ 300,000<span>〜</span></div>
+            <ul class="plan-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                月2回のセッション
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                実行支援・振り返り・改善提案
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <h3 class="plan-name">カスタムプラン</h3>
+            <p class="plan-duration">6ヶ月〜</p>
+            <div class="plan-price plan-price-custom">お見積り</div>
+            <ul class="plan-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                貴院の課題に合わせた設計
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                継続的な成長創出をサポート
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <p class="price-note">※料金はすべて税別です。内容に応じてカスタマイズ可能です。</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════ -->
+    <section class="section section-faq" id="faq">
+      <div class="container">
+        <div class="faq-inner">
+
+          <div class="faq-left">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="title-underline"></div>
+            <div class="faq-photo">
+              <div class="photo-placeholder photo-nurse-faq">スタッフ写真</div>
+            </div>
+          </div>
+
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-q">Q</span>
+                <span>コーチングはどのような効果がありますか？</span>
+                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>離職率の低下、チームの関係性改善、個人のモチベーション向上など、多面的な成果が期待できます。医療現場特有の課題に対し、対話を通じて根本から変革をサポートします。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-q">Q</span>
+                <span>どのような医療機関が対象ですか？</span>
+                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>病院・クリニック・介護施設・訪問看護ステーションなど、看護師が在籍するあらゆる医療機関が対象です。規模の大小は問いません。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-q">Q</span>
+                <span>オンラインでのお仕方は可能ですか？</span>
+                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>はい、オンライン（Zoom等）での対応が可能です。全国どこからでもご利用いただけます。訪問対応についても別途ご相談ください。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-q">Q</span>
+                <span>どのくらいの期間で効果を実感できますか？</span>
+                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>最初のセッションから変化を感じていただけるケースも多いですが、本質的な変革には3〜6ヶ月の継続が効果的です。定期的な振り返りで成果を可視化します。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-q">Q</span>
+                <span>契約前に相談することはできますか？</span>
+                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4EA3" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>もちろんです。まずは無料相談（30分）で、貴院の課題や状況をお聞かせください。最適なプランをご提案いたします。</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CTA
+    ══════════════════════════════════════ -->
+    <section class="section section-cta" id="contact">
+      <div class="container cta-inner">
+        <p class="cta-sub">Let's create the next well</p>
+        <h2 class="cta-headline">私たちが、貴院の未来を<br>一緒に描きます。</h2>
+        <p class="cta-desc">まずはお気軽にご相談ください。</p>
+        <a href="#" class="btn btn-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,5 12,13 21,5"/></svg>
+          無料相談を申し込む
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <a href="#" class="logo">
+        <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#A855F7"/>
+              <stop offset="50%"  stop-color="#06B6D4"/>
+              <stop offset="100%" stop-color="#EAB308"/>
+            </linearGradient>
+          </defs>
+          <path d="M5 10 L13 36 L21 18 L24 26 L27 18 L35 36 L43 10"
+                stroke="url(#lg2)" stroke-width="5.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-main">WellNext</span>
+          <span class="logo-sub">Nursing Lab <span class="logo-badge">WNL</span></span>
+        </div>
+      </a>
+
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="#service">サービス</a>
+        <a href="#results">導入実績</a>
+        <a href="#strength">強み</a>
+        <a href="#price">料金</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">会社概要</a>
+        <a href="#">プライバシーポリシー</a>
+      </nav>
+
+      <p class="footer-copy">© WellNext Nursing Lab All Rights Reserved.</p>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
 </body>
 </html>
