@@ -1,46 +1,69 @@
-WellNext Lab Webサイト プロジェクト
-プロジェクト概要
-このプロジェクトは、看護職向けの予防・教育ウェルネス事業「WellNext Lab」のWebサイト（ランディングページ）です。
-HTML/CSS/Vanilla JSのみで構築された静的サイトであり、フレームワークを使用していないため、環境構築の手間なく即座に編集・公開が可能です。
-ディレクトリ構成
-.
-├── index.html   # メインのHTMLファイル
-├── styles.css   # スタイルシート（CSS変数による色管理）
-├── script.js    # ヘッダー制御、スムーススクロール用JS
-└── README.md    # 本ドキュメント
+# WellNext Nursing Lab — Landing Page
 
+医療コーチングサービス「WellNext Nursing Lab」のランディングページです。
 
-ローカルでの確認方法
-このリポジトリをクローンまたはダウンロードします。
-フォルダ内の index.html をChromeやSafariなどのWebブラウザにドラッグ＆ドロップしてください。
-ローカルサーバー（Live Server等）は必須ではありませんが、使うと開発がスムーズです。
-GitHubへのPush手順（簡易）
-GitHubアカウント作成とリポジトリ作成が完了している前提の手順です。
-ターミナルを開き、プロジェクトフォルダへ移動
-cd path/to/project
+## フォルダ構成
 
+```
+/
+├── index.html          # メインHTML
+├── css/
+│   ├── style.css       # 変数・リセット・共通コンポーネント
+│   └── sections.css    # セクション別スタイル
+├── js/
+│   └── main.js         # FAQ アコーディオン・スクロール・ハンバーガーメニュー
+├── netlify.toml        # Netlify 設定
+└── README.md
+```
 
-Gitの初期化とファイル追加
-git init
-git add .
-git commit -m "Initial commit: WellNext Lab website structure"
+## セクション構成
 
+| セクション | ID |
+|---|---|
+| ヒーロー | `#home` |
+| サービス紹介 | `#service` |
+| 導入実績 | `#results` |
+| 選ばれる理由 | `#strength` |
+| 料金プラン | `#price` |
+| よくある質問 | `#faq` |
+| 無料相談CTA | `#contact` |
 
-リモートリポジトリへPush
-（[YOUR_REPO_URL] は作成したGitHubリポジトリのURLに置き換えてください）
-git branch -M main
-git remote add origin [YOUR_REPO_URL]
-git push -u origin main
+## 写真の差し替え方法
 
+各セクションの `.photo-placeholder` 要素を `<img>` タグに置き換えてください。
 
-Netlifyへのデプロイ手順
-サーバー管理不要で、GitHubと連携して自動公開します。
-Netlify にアクセスし、アカウント作成/ログイン。
-"Add new site" > "Import an existing project" を選択。
-"GitHub" を選択し、先ほどアップロードした「WellNext Lab」のリポジトリを選択。
-設定画面（Build settings）が表示されますが、変更不要です。
-Build command: （空欄でOK）
-Publish directory: （空欄または / でOK）
-"Deploy site" をクリック。
-数秒〜数分で公開用URLが発行されます。（例: wellnext-lab.netlify.app）
-以降は、PCでコードを編集しGitHubへPushするだけで、Netlify上のサイトも自動更新されます。
+```html
+<!-- Before (プレースホルダー) -->
+<div class="photo-placeholder photo-nurse-main">看護師メイン写真</div>
+
+<!-- After (実写真) -->
+<img src="assets/images/nurse-hero.jpg" alt="看護師メイン写真">
+```
+
+## Netlify デプロイ手順
+
+1. このリポジトリを GitHub に push する
+2. [Netlify](https://app.netlify.com) にログイン → **Add new site** → **Import an existing project**
+3. GitHub を連携してリポジトリを選択
+4. **Build settings** はデフォルトのまま（静的サイトのため不要）
+5. **Deploy site** をクリック
+
+## ローカル確認
+
+```bash
+# npx serve などで静的サーバーを起動
+npx serve .
+# → http://localhost:3000
+```
+
+## カスタマイズ
+
+`css/style.css` の `:root` ブロックでブランドカラーを一括変更できます。
+
+```css
+:root {
+  --pink:  #FF4EA3;  /* メインアクセント */
+  --teal:  #00C9A7;  /* サブアクセント   */
+  --dark:  #1a1a2e;  /* テキスト         */
+}
+```
