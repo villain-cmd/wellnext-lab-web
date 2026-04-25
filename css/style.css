@@ -1,0 +1,333 @@
+/* ============================================
+   CSS Variables
+   ============================================ */
+:root {
+  --pink:       #FF4EA3;
+  --pink-light: #FF82C4;
+  --pink-pale:  #FFF0F6;
+  --teal:       #00C9A7;
+  --teal-pale:  #F0FFF9;
+  --yellow:     #FFDD00;
+  --yellow-pale:#FFFCE0;
+  --purple:     #A855F7;
+  --orange:     #FF8A48;
+  --blue:       #4FAFFF;
+  --dark:       #1a1a2e;
+  --gray:       #6b7280;
+  --light:      #f8f8fc;
+  --white:      #ffffff;
+  --container:  1160px;
+  --radius:     16px;
+  --shadow:     0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg:  0 8px 40px rgba(0,0,0,0.12);
+}
+
+/* ============================================
+   Reset & Base
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; font-size: 16px; }
+body  {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  color: var(--dark);
+  background: #fff;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+img   { max-width: 100%; display: block; }
+a     { text-decoration: none; color: inherit; }
+ul    { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ============================================
+   Container
+   ============================================ */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+.btn svg { flex-shrink: 0; }
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF4EA3 0%, #FF82C4 100%);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(255,78,163,0.35);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,78,163,0.45); }
+
+.btn-outline {
+  background: #fff;
+  color: var(--dark);
+  border: 2px solid #e0e0e0;
+}
+.btn-outline:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-2px); }
+
+.btn-teal {
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,201,167,0.3);
+}
+.btn-teal:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,201,167,0.4); }
+
+.btn-cta {
+  background: #fff;
+  color: var(--pink);
+  font-weight: 700;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+
+.btn-sm { padding: 10px 20px; font-size: 13px; }
+
+/* ============================================
+   Logo
+   ============================================ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--dark);
+  letter-spacing: 0.01em;
+}
+.logo-sub {
+  font-size: 11px;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.logo-badge {
+  background: linear-gradient(135deg, var(--purple), var(--teal));
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   Photo Placeholders
+   ============================================ */
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12px;
+  font-size: 11px;
+  color: rgba(80,80,120,0.6);
+  text-align: center;
+  font-style: italic;
+  font-family: monospace;
+  background-size: 20px 20px;
+}
+.photo-nurse-main {
+  background-color: #f0e8ff;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(168,85,247,0.06) 0, rgba(168,85,247,0.06) 1px, transparent 0, transparent 50%);
+}
+.photo-hospital-1 {
+  background-color: #e0f4ff;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(79,175,255,0.08) 0, rgba(79,175,255,0.08) 1px, transparent 0, transparent 50%);
+}
+.photo-hospital-2 {
+  background-color: #dffff5;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(0,201,167,0.08) 0, rgba(0,201,167,0.08) 1px, transparent 0, transparent 50%);
+}
+.photo-hospital-3 {
+  background-color: #e8f7e0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(80,180,80,0.08) 0, rgba(80,180,80,0.08) 1px, transparent 0, transparent 50%);
+}
+.photo-nurse-faq {
+  background-color: #ffe8f5;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,78,163,0.06) 0, rgba(255,78,163,0.06) 1px, transparent 0, transparent 50%);
+}
+
+/* ============================================
+   Section Base
+   ============================================ */
+.section { padding: 90px 0; position: relative; overflow: hidden; }
+
+.section-watermark {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(56px, 9vw, 96px);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,78,163,0.10);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.05em;
+  z-index: 0;
+}
+
+.section-title {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.title-underline {
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pink), var(--teal));
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+.section-header { margin-bottom: 48px; }
+.section-header p { color: var(--gray); font-size: 14px; margin-top: 6px; }
+
+/* ============================================
+   Decorative blob (CSS organic shape)
+   ============================================ */
+.deco-blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+#header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+#header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 70px;
+}
+
+.nav { margin-left: auto; }
+.nav ul { display: flex; gap: 24px; }
+.nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark);
+  transition: color 0.2s;
+}
+.nav a:hover { color: var(--pink); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+  margin-left: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background: var(--dark);
+  padding: 40px 0 28px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+.footer .logo-main { color: #fff; }
+.footer .logo-sub  { color: rgba(255,255,255,0.5); }
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+}
+.footer-nav a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--pink); }
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ============================================
+   Responsive — Mobile
+   ============================================ */
+@media (max-width: 900px) {
+  .nav {
+    position: fixed;
+    top: 70px; left: 0; right: 0;
+    background: #fff;
+    padding: 24px 32px;
+    transform: translateY(-110%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 190;
+  }
+  .nav.open { transform: translateY(0); }
+  .nav ul { flex-direction: column; gap: 14px; }
+  .hamburger { display: flex; }
+  .header-inner .btn-sm { display: none; }
+  .section { padding: 60px 0; }
+}
